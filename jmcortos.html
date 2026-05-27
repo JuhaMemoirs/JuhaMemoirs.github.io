@@ -307,18 +307,17 @@
     }
 
     /* ══════════════════════════════
-       BOTTOM NAV
+       BOTTOM NAV (igual al index - blanco)
     ══════════════════════════════ */
     .bottom-nav {
       height: var(--nav-h);
-      background: rgba(13,17,23,.95);
-      border-top: 1px solid rgba(26,107,255,.20);
+      background: #ffffff;
+      border-top: 1.5px solid #e8f0ff;
       display: flex;
       align-items: center;
       justify-content: space-around;
       flex-shrink: 0;
       z-index: 20;
-      backdrop-filter: blur(12px);
     }
     .nav-item {
       display: flex; flex-direction: column;
@@ -329,26 +328,25 @@
       border: none; background: transparent;
       -webkit-tap-highlight-color: transparent;
       transition: background .15s;
-      min-width: 0;
-      flex: 1;
+      min-width: 0; flex: 1;
     }
-    .nav-item:active { background: rgba(26,107,255,.15); }
-    .nav-icon { color: rgba(255,255,255,.40); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; transition: color .15s; }
+    .nav-item:active { background: #e8f0ff; }
+    .nav-icon { color: #8a93a8; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; transition: color .15s; }
     .nav-icon svg { width: 20px; height: 20px; }
-    .nav-label { font-family: 'Sora', sans-serif; font-size: 9px; font-weight: 600; color: rgba(255,255,255,.40); transition: color .15s; white-space: nowrap; }
-    .nav-item.active .nav-icon { color: var(--blue); }
-    .nav-item.active .nav-label { color: var(--blue); }
-
+    .nav-label { font-family: 'Sora', sans-serif; font-size: 9px; font-weight: 600; color: #8a93a8; transition: color .15s; white-space: nowrap; }
+    .nav-item.active .nav-icon { color: #1a6bff; }
+    .nav-item.active .nav-label { color: #1a6bff; }
     .nav-plus {
       width: 46px; height: 46px;
       border-radius: 14px;
-      background: var(--blue);
+      background: #1a6bff;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer;
-      box-shadow: 0 4px 16px rgba(26,107,255,.50);
+      box-shadow: 0 4px 16px rgba(26,107,255,.40);
       border: none;
       margin-bottom: 4px;
       transition: transform .15s;
+      flex-shrink: 0;
     }
     .nav-plus:active { transform: scale(.93); }
     .nav-plus svg { width: 22px; height: 22px; color: white; }
@@ -553,12 +551,11 @@
       <span class="nav-label">Principal</span>
     </button>
     <button class="nav-item active" title="Cortos">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M13 2L4.5 13.5H11L9 22L19.5 10.5H13Z"/>
-        </svg>
-      </div>
-      <span class="nav-label">Cortos</span>
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="color:#1a6bff">
+        <path d="M13 2L4.5 13.5H11L9 22L19.5 10.5H13Z"/>
+      </svg>
+      <span style="font-family:'Sora',sans-serif;font-size:9px;font-weight:800;color:#1a6bff;line-height:1;letter-spacing:.5px">JM</span>
+      <span style="font-family:'Sora',sans-serif;font-size:7px;font-weight:600;color:#1a6bff;line-height:1;letter-spacing:1.5px;text-transform:uppercase">CORTOS</span>
     </button>
     <button class="nav-plus" title="Crear">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -570,10 +567,5 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
-      </div>
-      <span class="nav-label">Posts</span>
-    </button>
-    <button class="nav-item" title="Cuenta">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-     
+  </div>
+  
